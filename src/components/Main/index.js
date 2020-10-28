@@ -11,7 +11,7 @@ function Main() {
 
   return <main id="main">
 {posts.map((post)=>
-     <Posts key ={post.id} post={post} />
+     <Posts key ={post.postId} post={post} />
 )}
 
   </main>;
