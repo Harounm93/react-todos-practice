@@ -3,12 +3,17 @@ import React from 'react';
 import './index.css';
 
 function Post({ post }) {
-  const { title, author, text, postId } = post;
+  const { title, author, text, postId, highlights } = post;
   
   return <article id={postId} >
       <h1>{title}</h1>
       <h3>{author}</h3>
       <p>{text}</p>
+      <ul>
+        {highlights.map((highlight, index) => 
+         <li key ={index}> {highlight}</li>
+        )}
+      </ul>
 
   </article>;
 }
